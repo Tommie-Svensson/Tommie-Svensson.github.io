@@ -12,10 +12,10 @@
         // Make an AJAX call to the Open Weather Maps API
         $.ajax({
               url: 'http://192.168.1.61/api/DLm-zlYP-nABkiO7iFLqAcoyTeuxk-EooFBj7EAO/lights/8/state',
-              type: 'PUT',
-              data: '{"on":true}',
-              dataType: 'jsonp',
-              success: callback
+              type: 'put',
+              data: JSON.stringify({"on":true}'),
+              dataType: 'json',
+              success: function (data)
         });
     };
 
@@ -27,5 +27,5 @@
     };
 
     // Register the extension
-    ScratchExtensions.register('Weather extension', descriptor, ext);
+    ScratchExtensions.register('Maxi', descriptor, ext);
 })({});
