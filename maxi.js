@@ -53,6 +53,7 @@
     ext.lampColor = function(hue, sat, bri, callback) {
         // Make an AJAX call to the Open Weather Maps API
         var json = '{"on":true,"hue":' + hue + ',"sat":'+ sat + ',"bri":' + bri + '}';
+        console.log(json);
         var url = 'http://192.168.1.61/api/DLm-zlYP-nABkiO7iFLqAcoyTeuxk-EooFBj7EAO/lights/8/state';
          $.ajax({
             method: "PUT",
@@ -61,6 +62,7 @@
             data: JSON.stringify(json),
             contentType: "text/plain",
             success: function () {
+		        console.log('success');
                 callback();
             },
             error: function (xhr, textStatus, error) {
