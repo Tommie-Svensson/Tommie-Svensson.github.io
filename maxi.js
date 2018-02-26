@@ -69,9 +69,9 @@
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            [' ', 'Tänd', 'lampOn'],
-            [' ', 'Släck', 'lampOff'],
-            [' ', 'Grön', 'lampGreen', hue, sat],
+            ['w', 'Tänd', 'lampOn'],
+            ['w', 'Släck', 'lampOff'],
+            ['w', 'Färg', 'lampColor', hue, sat],
         ]
     };
 
