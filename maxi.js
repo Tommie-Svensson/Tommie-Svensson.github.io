@@ -74,7 +74,7 @@
         blocks: [
             ['w', 'Tänd', 'lampOn'],
             ['w', 'Släck', 'lampOff'],
-            ['w', 'Färg', 'lampColor', hue, sat],
+            ['w', 'Hue %s Sat %s', 'lampColor', hue, sat],
         ]
     };
 
