@@ -15,7 +15,7 @@
               type: 'put',
               data: JSON.stringify({"on":true}'),
               dataType: 'json',
-              success: function (data)
+              success: callback
         });
     };
 
