@@ -10,12 +10,20 @@
 
     ext.lampOn = function() {
         // Make an AJAX call to the Open Weather Maps API
-        $.ajax({
-              url: 'http://192.168.1.61/api/DLm-zlYP-nABkiO7iFLqAcoyTeuxk-EooFBj7EAO/lights/8/state',
-              type: 'put',
-              data: JSON.stringify({"on":true}),
-              dataType: 'json',
-              success: callback
+        var url = 'http://192.168.1.61/api/DLm-zlYP-nABkiO7iFLqAcoyTeuxk-EooFBj7EAO/lights/8/state';
+         $.ajax({
+            method: "PUT",
+            cache: false,
+            url: url,
+            data: JSON.stringify({"on":true}),
+            contentType: "text/plain",
+            success: function () {
+                callback();
+            },
+            error: function (xhr, textStatus, error) {
+                console.log(error);
+                callback();
+            }
         });
     };
 
