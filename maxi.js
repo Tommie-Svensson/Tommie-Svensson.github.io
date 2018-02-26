@@ -2,6 +2,7 @@
 
 	var hue = 10000;
 	var sat = 254;
+	var bri = 254;
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
 
@@ -49,9 +50,9 @@
         });
     };
 
-    ext.lampColor = function(hue, sat) {
+    ext.lampColor = function(hue, sat, bri) {
         // Make an AJAX call to the Open Weather Maps API
-        var json = '"on":true,"hue":' + hue + ',"sat":'+ sat;
+        var json = '"on":true,"hue":' + hue + ',"sat":'+ sat + ',"bri":' + bri + '';
         var url = 'http://192.168.1.61/api/DLm-zlYP-nABkiO7iFLqAcoyTeuxk-EooFBj7EAO/lights/8/state';
          $.ajax({
             method: "PUT",
@@ -74,7 +75,7 @@
         blocks: [
             ['w', 'Tänd', 'lampOn'],
             ['w', 'Släck', 'lampOff'],
-            ['w', 'Hue %s Sat %s', 'lampColor', hue, sat],
+            ['w', 'Hue %s Sat %s Bri %s', 'lampColor', hue, sat, bri],
         ]
     };
 
