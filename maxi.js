@@ -13,7 +13,7 @@
         $.ajax({
               url: 'http://192.168.1.61/api/DLm-zlYP-nABkiO7iFLqAcoyTeuxk-EooFBj7EAO/lights/8/state',
               type: 'put',
-              data: JSON.stringify({"on":true}'),
+              data: JSON.stringify({"on":true}),
               dataType: 'json',
               success: callback
         });
