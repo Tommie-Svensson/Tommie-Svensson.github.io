@@ -53,7 +53,7 @@
             method: "PUT",
             cache: false,
             url: url,
-            data: JSON.stringify({"on":false,"hue":64921,"ct":153}),
+            data: JSON.stringify({"on":true,"hue":64921,"ct":153}),
             contentType: "text/plain",
             success: function () {
                 callback();
