@@ -12,7 +12,7 @@
         return {status: 2, msg: 'Ready'};
     };
 
-    ext.lampOn = function() {
+    ext.lampOn = function(callback) {
         // Make an AJAX call to the Open Weather Maps API
         var url = 'http://192.168.1.61/api/DLm-zlYP-nABkiO7iFLqAcoyTeuxk-EooFBj7EAO/lights/8/state';
          $.ajax({
@@ -31,7 +31,7 @@
         });
     };
 
-    ext.lampOff = function() {
+    ext.lampOff = function(callback) {
         // Make an AJAX call to the Open Weather Maps API
         var url = 'http://192.168.1.61/api/DLm-zlYP-nABkiO7iFLqAcoyTeuxk-EooFBj7EAO/lights/8/state';
          $.ajax({
@@ -50,7 +50,7 @@
         });
     };
 
-    ext.lampColor = function(hue, sat, bri) {
+    ext.lampColor = function(hue, sat, bri, callback) {
         // Make an AJAX call to the Open Weather Maps API
         var json = '"on":true,"hue":' + hue + ',"sat":'+ sat + ',"bri":' + bri + '';
         var url = 'http://192.168.1.61/api/DLm-zlYP-nABkiO7iFLqAcoyTeuxk-EooFBj7EAO/lights/8/state';
