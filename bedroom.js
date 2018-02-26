@@ -80,5 +80,5 @@
     };
 
     // Register the extension
-    ScratchExtensions.register('Maxi', descriptor, ext);
+    ScratchExtensions.register('Bedroom', descriptor, ext);
 })({});
