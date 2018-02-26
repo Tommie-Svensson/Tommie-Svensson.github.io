@@ -27,10 +27,30 @@
         });
     };
 
+    ext.lampOff = function() {
+        // Make an AJAX call to the Open Weather Maps API
+        var url = 'http://192.168.1.61/api/DLm-zlYP-nABkiO7iFLqAcoyTeuxk-EooFBj7EAO/lights/8/state';
+         $.ajax({
+            method: "PUT",
+            cache: false,
+            url: url,
+            data: JSON.stringify({"on":false}),
+            contentType: "text/plain",
+            success: function () {
+                callback();
+            },
+            error: function (xhr, textStatus, error) {
+                console.log(error);
+                callback();
+            }
+        });
+    };
+
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            [' ', 'Maxi', 'lampOn'],
+            [' ', 'Tänd', 'lampOn'],
+            [' ', 'Släck', 'lampOff'],
         ]
     };
 
