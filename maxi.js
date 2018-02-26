@@ -1,4 +1,7 @@
 (function(ext) {
+
+	var hue = 10000;
+	var sat = 254;
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
 
