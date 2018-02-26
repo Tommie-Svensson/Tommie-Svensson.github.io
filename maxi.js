@@ -59,7 +59,7 @@
             method: "PUT",
             cache: false,
             url: url,
-            data: JSON.stringify(json),
+            data: json,
             contentType: "text/plain",
             success: function () {
 		        console.log('success');
