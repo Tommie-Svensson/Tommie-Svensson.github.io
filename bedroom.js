@@ -1,9 +1,9 @@
 (function(ext) {
 
 	var hue = 10000;
-	var sat = 254;
+	var sat = 0;
 	var bri = 254;
-    var color = 0;
+    var color = white;
     var url = 'http://192.168.1.61/api/DLm-zlYP-nABkiO7iFLqAcoyTeuxk-EooFBj7EAO/groups/3/action';
     ext._shutdown = function() {};
 
