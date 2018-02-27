@@ -136,9 +136,10 @@
             ['w', 'Hue %n Sat %n Bri %n', 'lampColor', hue, sat, bri],
             ['w', 'Color %m.colors', 'testColor', color],
         ],
-        menus: [
+        menus: {
             colors: ['red','blue','green','yellow','orange','purple','pink','white']
-        ]
+        },
+        url: 'http://scratchx.org/?url=https://Tommie-Svensson.github.io/bedroom.js#scratch'
     };
 
     // Register the extension
