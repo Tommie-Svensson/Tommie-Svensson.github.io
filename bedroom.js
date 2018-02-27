@@ -66,7 +66,50 @@
     };
 
     ext.testColor = function(color, callback) {
-        var json = '{"on":true,"hue":' + color + ',"sat":254,"bri":254}';
+        //'red','blue','green','yellow','orange','purple','pink','white'
+        switch(color) {
+            case 'red':
+                hue = 0;
+                bri = 254;
+                sat = 254;
+                break;
+            case 'blue':
+                hue = 46920;
+                bri = 254;
+                sat = 254;
+                break;
+            case 'green':
+                hue = 25500;
+                bri = 254;
+                sat = 254;
+                break;
+            case 'yellow':
+                hue = 12750;
+                bri = 254;
+                sat = 254;
+                break;
+            case 'orange':
+                hue = 8000;
+                bri = 120;
+                sat = 254;
+                break;
+            case 'purple':
+                hue = 56100;
+                bri = 120;
+                sat = 254;
+                break;
+            case 'pink':
+                hue = 56100;
+                bri = 254;
+                sat = 200;
+                break;
+            case 'white':
+                hue = 0;
+                bri = 254;
+                sat = 0;
+                break;
+        }
+        var json = '{"on":true,"hue":' + hue + ',"sat":'+ sat + ',"bri":' + bri + '}';
         console.log(json);
          $.ajax({
             method: "PUT",
@@ -90,8 +133,11 @@
         blocks: [
             ['w', 'Turn on lamps', 'lampOn'],
             ['w', 'Turn off lamps', 'lampOff'],
-            ['w', 'Hue %s Sat %s Bri %s', 'lampColor', hue, sat, bri],
-            ['w', 'Color %m.colorPicker', 'testColor', color],
+            ['w', 'Hue %n Sat %n Bri %n', 'lampColor', hue, sat, bri],
+            ['w', 'Color %m.colors', 'testColor', color],
+        ],
+        menus: [
+            colors: ['red','blue','green','yellow','orange','purple','pink','white']
         ]
     };
 
