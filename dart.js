@@ -1,8 +1,8 @@
 (function(ext) {
 
-	var hue = 10000;
-	var sat = 255;
-	var bri = 255;
+	var hue = 0;
+	var sat = 0;
+	var bri = 127;
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
 
@@ -19,7 +19,7 @@
             method: "PUT",
             cache: false,
             url: url,
-            data: JSON.stringify({"on":true,"hue":10000}),
+            data: JSON.stringify({"on":true}),
             contentType: "text/plain",
             success: function () {
                 callback();
