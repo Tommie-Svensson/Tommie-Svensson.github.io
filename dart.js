@@ -75,12 +75,12 @@
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            ['w', 'Tänd', 'lampOn'],
-            ['w', 'Släck', 'lampOff'],
-            ['w', 'Hue %s Sat %s Bri %s', 'lampColor', hue, sat, bri],
+            ['w', 'Lamp On', 'lampOn'],
+            ['w', 'Lamp Off', 'lampOff'],
+            ['w', 'Lamp Hue %s Sat %s Bri %s', 'lampColor', hue, sat, bri],
         ]
     };
 
     // Register the extension
-    ScratchExtensions.register('Maxi', descriptor, ext);
+    ScratchExtensions.register('MaxiDart', descriptor, ext);
 })({});
