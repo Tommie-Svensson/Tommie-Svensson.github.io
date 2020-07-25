@@ -80,5 +80,5 @@
     };
 
     // Register the extension
-    ScratchExtensions.register('MaxiDart', descriptor, ext);
+    ScratchExtensions.register('Hue', descriptor, ext);
 })({});
