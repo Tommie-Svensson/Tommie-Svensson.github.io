@@ -3,6 +3,7 @@
 	var hue = 0;
 	var sat = 0;
 	var bri = 127;
+	var lamp = 28;
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
 
